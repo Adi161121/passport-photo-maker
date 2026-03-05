@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* Custom scrollbar for controls panel */
+.controls::-webkit-scrollbar {
+  width: 8px;
+}
+
+.controls::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.controls::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.controls::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track (same dark as background) */
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+/* Thumb (same tone as panel card) */
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.featureCard{
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featureCard:hover{
+transform: translateY(-6px);
+box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.howCard{
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.howCard:hover{
+transform: translateY(-6px);
+box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.heroPanel{
+transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.heroPanel:hover{
+box-shadow: 0 0 0 1px rgba(59,130,246,0.25), 
+            0 10px 30px rgba(59,130,246,0.15);
+border-color: rgba(59,130,246,0.35);
+}
+
+button{
+transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+cursor: pointer;
+}
+
+button:hover{
+filter: brightness(1.08);
+box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+button:active{
+transform: scale(0.97);
+box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+nav span{
+transition: color 0.2s ease;
+cursor: pointer;
+}
+
+nav span:hover{
+color: #60a5fa;
+}
+
+.spinner {
+  width:16px;
+  height:16px;
+  border:2px solid rgba(255,255,255,0.3);
+  border-top:2px solid white;
+  border-radius:50%;
+  animation:spin .6s linear infinite;
+  display:inline-block;
+  margin-right:8px;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg);}
+}
+
+/* Responsive */
+
+/* HERO LAYOUT */
+@media (max-width: 900px){
+
+.hero{
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap: 30px;
+}
+
+.heroLeft{
+width: 100%;
+max-width: 520px;
+}
+
+.heroRight{
+width: 100%;
+max-width: 420px;
+}
+
+}
+
+
+/* TOOL LAYOUT */
+@media (max-width: 900px){
+
+.appWrapper{
+flex-direction: column;
+gap: 18px;
+}
+
+/* preview first */
+.preview{
+width: 100%;
+order: 1;
+min-height: 260px;
+padding: 20px;
+}
+
+/* controls below preview */
+.controls{
+width: 100%;
+order: 2;
+max-width: 100%;
+max-height: 420px;
+padding: 20px;
+}
+
+}
+
+
+/* PREVIEW IMAGE SIZE */
+@media (max-width:768px){
+
+.preview{
+min-height:240px !important;
+padding:20px !important;
+}
+
+.canvasLarge{
+max-width:180px !important;
+}
+
+}
+
+
+/* HERO TEXT */
+@media (max-width:768px){
+
+.heroTitle{
+font-size:28px !important;
+line-height:1.2;
+}
+
+.heroSubtitle{
+font-size:14px;
+}
+
+}
+
+
+/* NAVBAR */
+@media (max-width: 900px){
+
+.navLinks{
+display: none;
+}
+
+}
+
+
+/* SPACING */
+@media (max-width: 768px){
+
+.hero{
+gap: 24px !important;
+}
+
+.appWrapper{
+gap: 16px !important;
+}
+
+}
+
+@media (max-width: 900px){
+
+.hero{
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap: 40px;
+}
+
+.heroLeft{
+max-width: 600px;
+}
+
+.heroRight{
+max-width: 420px;
+width:100%;
+}
+
+}
+
+@media (max-width:600px){
+
+.heroTitle{
+font-size:38px;
+line-height:1.2;
+}
+
+}
+
+@media (max-width:768px){
+
+.navLinks{
+display:none;
+}
+
+.navbar{
+padding:0 4px;
+}
+
+}
+
+* {
+  caret-color: transparent;
+}
+
+@media (max-width:768px){
+
+.howSection{
+margin-top:60px !important;
+padding:40px 20px !important;
+}
+
+.featuresSection{
+margin-top:60px !important;
+padding:40px 20px !important;
+}
+
+.freeSection{
+margin-top:70px !important;
+padding:50px 20px !important;
+}
+
+.sectionDivider{
+margin:40px 0 !important;
+}
+
+}
