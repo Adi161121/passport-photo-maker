@@ -563,7 +563,12 @@ useEffect(() => {
     </section>
 
 
-<div style={styles.sectionDivider}></div>
+<div
+  style={{
+    ...styles.sectionDivider,
+    margin: isMobile ? "40px 0" : "80px 0"
+  }}
+></div>
 
 {/* HOW IT WORKS */}
 <section id="how" style={styles.howSection}>
@@ -653,8 +658,12 @@ useEffect(() => {
 
 </section>
 
-
-<div style={styles.sectionDivider}></div>
+<div
+  style={{
+    ...styles.sectionDivider,
+    margin: isMobile ? "40px 0" : "80px 0"
+  }}
+></div>
 
 
 {/* FREE SECTION */}
@@ -680,11 +689,13 @@ useEffect(() => {
       Passport Photo Maker
     </div>
 
-    <div style={styles.footerLinks}>
-      <a href="#features">Features</a>
-      <a href="#how">How It Works</a>
-      <a href="#free">Free</a>
-    </div>
+    {!isMobile && (
+  <div style={styles.footerLinks}>
+    <a href="#features">Features</a>
+    <a href="#how">How It Works</a>
+    <a href="#free">Free</a>
+  </div>
+)}
 
     <div style={styles.footerCopy}>
       © {new Date().getFullYear()} Passport Photo Maker
@@ -1194,14 +1205,19 @@ footerContent: {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  flexWrap: "wrap",
+  rowGap: "8px",
+  columnGap: "20px",
   padding: "0 20px",
   color: "rgba(255,255,255,0.6)",
-  fontSize: "13px"
+  fontSize: "12px"
 },
 
 footerBrand: {
   fontWeight: "600",
-  color: "#fff"
+  color: "#fff",
+  fontSize: "14px",
+  lineHeight: "1.2"
 },
 
 footerLinks: {
@@ -1210,8 +1226,9 @@ footerLinks: {
 },
 
 footerCopy: {
-  fontSize: "13px",
-  color: "rgba(255,255,255,0.5)"
+  fontSize: "12px",
+  color: "rgba(255,255,255,0.5)",
+  whiteSpace: "nowrap"
 }
 };
 
