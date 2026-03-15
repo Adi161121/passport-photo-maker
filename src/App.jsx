@@ -701,7 +701,7 @@ useEffect(() => {
       © {new Date().getFullYear()} Passport Photo Maker
     </div>
     <div style={styles.footerCopy}>Designed & Developed by
-        <span style={{color:"#ccc9c9"}}> Sumedh Sakpal</span>
+        <span style={{color:"#ccc9c9"}}> Aditya Sakpal</span>
     </div>
 
   </div>
